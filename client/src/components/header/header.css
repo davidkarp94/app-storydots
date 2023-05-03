@@ -1,0 +1,57 @@
+.header-container {
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black-light);
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.username-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.username {
+    color: white;
+    font-weight: 700;
+}
+
+/* Login */
+
+.login-container {
+    background-color: var(--bg-color);
+    width: 400px;
+    padding: 2rem;
+}
+
+.login-form-group {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.login-form-group label {
+    font-weight: 700;
+}
+
+.login-form-group input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.form-actions {
+    justify-content: end;
+}
