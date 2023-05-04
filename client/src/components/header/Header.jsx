@@ -17,7 +17,7 @@ const Header = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch(`http://localhost:3000/login`, {
+      const response = await fetch(`https://storydots-app-server.onrender.com/login`, {
         method: "POST",
         headers: {
         "Content-Type": "application/json"

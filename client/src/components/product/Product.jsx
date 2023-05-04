@@ -22,11 +22,11 @@ const Product = ({ id, name, description, image_url, price, handleList }) => {
     }
 
     const onError = () => {
-        setImageSrc(`http://localhost:3000/assets/no-image.png`)
+        setImageSrc(`https://storydots-app-server.onrender.com/assets/no-image.png`)
     }
 
     const handleDelete = async(id) => {
-        const response = await fetch(`http://localhost:3000/products/${id}`, {
+        const response = await fetch(`https://storydots-app-server.onrender.com/products/${id}`, {
             method: 'DELETE' 
         })
         const data = response.json();

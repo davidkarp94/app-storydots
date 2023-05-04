@@ -27,7 +27,7 @@ const Home = () => {
   useEffect(() => {
     const getProducts = async() => {
       try {
-        const response = await fetch('http://localhost:3000/products', {
+        const response = await fetch('https://storydots-app-server.onrender.com/products', {
           method: 'GET'
         });
         const data = await response.json();

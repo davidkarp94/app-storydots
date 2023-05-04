@@ -27,7 +27,7 @@ const FormNewProduct = ({ closeModal, updateList }) => {
       formData.append("image", image);
       formData.append("image_url", image.name);
       
-      const response = await fetch("http://localhost:3000/products", {
+      const response = await fetch("https://storydots-app-server.onrender.com/products", {
         method: "POST",
         body: formData,
       });

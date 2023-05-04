@@ -10,7 +10,7 @@ const FormEditProduct = ({ closeModal, id, name: initialName, description: initi
     event.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:3000/products/${id}`, {
+      const response = await fetch(`https://storydots-app-server.onrender.com/products/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
