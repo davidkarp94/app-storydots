@@ -1,0 +1,13 @@
+La aplicación fue desarrollada por David Karp utilizando principalmente ReactJs para el cliente y NodeJs con ExpressJs para el servidor. La app ofrece una lista de productos obtenidos desde una base de datos y se pueden ver los detalles de cada uno haciendo clic en ellos. Además, cuenta con una función de inicio de sesión que permite el acceso a la funcionalidad CRUD para cada producto, cuando se inicia sesión como usuario "admin" con la contraseña "admin".
+
+El repositorio está organizado en las carpetas "cliente", que contiene el FrontEnd de la aplicación, y "server", que contiene el Backend. El FrontEnd fue construido utilizando ReactJs y Vite, y se divide en carpetas que contienen tanto las páginas (en este caso, solo Home) como los componentes que se utilizan.
+
+El Backend se construyó utilizando NodeJs junto con ExpressJs para el servidor, y se utilizó MySql para la base de datos. La base de datos está alojada en AWS EC2, y se utiliza Multer para cargar imágenes (solo para desarrollo) que se suben a AWS S3 mediante un bucket. El servidor y el cliente están alojados en render.com.
+
+Los endpoints de la aplicación incluyen: POST /login (para la autenticación), GET /products (para obtener todos los productos), GET /:id (para obtener un producto por su id), POST /products (para agregar un nuevo producto), DELETE /products/:id (para borrar un producto por su id) y PUT /products/:id (para modificar un producto por su id).
+
+El servidor consta del archivo server.js, que es el principal, y s3.js (para subir imágenes a AWS S3) y config.js (que contiene los parámetros de la base de datos) se encuentran en la carpeta raíz. Los demás archivos están organizados en carpetas, como public/images (para subir imágenes con Multer, solo para desarrollo), controllers (que contiene los controladores para las peticiones HTTP) y routes (que contiene las rutas de las peticiones, donde se invoca la función correspondiente desde los controladores).
+
+Para ejecutar el servidor localmente solo es necesario tener ReactJs para el FrontEnd y modificar las variables de entorno que se encuentran en varios archivos del servidor, las cuales se encuentran ocultas en el archivo .env.
+
+Me hubiera gustado levantar el servidor y el cliente en AWS, pero no pude por falta de tiempo, una de las cosas que haría si hubiese tenido más sería involucrarme más con los servicios que ofrece AWS y entenderlos mucho mejor. En cuanto a posibles mejoras, se podrían agregar funcionalidades como registro de usuarios, separación de productos por categorías y añadir un motor de búsqueda con filtros, así como también se podrían incorporar varias rutas al header con secciones diferentes. Al tratarse de un eCommerce, hay muchas funcionalidades que se pueden añadir y mejorar.
